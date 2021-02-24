@@ -1,0 +1,25 @@
+* {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  font-size: 1.1em;
+  margin: 10px;
+  align-items: center;
+}
+h3 {
+  width: 350px;
+  align-items: center;
+}
+.mainArea {
+  display: grid;
+  width: fit-content;
+  height: fit-content;
+  /* height: 50%; */
+  background-color: #f2f2f2f2;
+  border-style: solid;
+  border-width: 0.001px;
+  border-color: black;
+}
+.description {
+  width: 350px;
+}

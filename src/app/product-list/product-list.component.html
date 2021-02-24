@@ -1,0 +1,27 @@
+<h2>Products</h2>
+
+<div class="mainArea" *ngFor="let product of products">
+	<a [title]="product.name + ' details'" href="{{product.link}}">
+		<h3>
+			{{product.name}}
+		</h3>
+		<br>
+	</a>
+		<div class="inMain">
+			<img src="{{product.img}}" height="200px">
+			<div class="description">
+				<p *ngIf="product.description">
+					Description:<br> {{product.description}}
+      </p>
+			</div>
+			<a href="https://wa.me/?text=Look What I found on Amazon             ( ͡° ͜ʖ ͡°)   {{product.link}}"
+				target="_blank">
+				<button >
+          <!-- (click)="share()" -->
+          Share via Whatsapp
+      </button>
+			</a>
+			<app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+			<br><br>
+  </div>
+		</div>
